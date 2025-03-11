@@ -33,5 +33,7 @@ jobs:
         run: echo "Hash of files ${{ hashFiles('**/package-lock.json', '**/Gemfile.lock') }}
       - name: The job has succeeded
         if: ${{ success() }}
+        run: echo "Job ended successfully!"
       - name: The job has failed
         if: ${{ failure() }}
+        run: echo "Job failed with an error!"
